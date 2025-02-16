@@ -1,13 +1,13 @@
 # **Intelligence X Data Extractor**
 
-A powerful Python script for **extracting and analyzing Intelligence X `.zip` archives** containing leaked data. This script processes the archive, extracts relevant credentials and metadata, and **filters the data to keep only the oldest records per unique Email + Password pair**.
+A powerful Python script for extracting and analyzing Intelligence X `.zip` archives containing leaked data. This script processes the archive, extracts relevant credentials and metadata, and filters the data in a separate file to indicate the first leaked instance of the leaked credentials per unique Email + Password pair.
 
 ---
 
 ## **🔹 Features**
 - Extracts data from **Intelligence X** `.zip` archives.
 - Saves all extracted credentials, emails, and passwords in structured files.
-- **Filters and keeps only the oldest entry** per **Email + Password** in `filtered.xlsx`.
+- **Filters and keeps only the oldest entry** per **Email + Password** in `filtered.xlsx` to indicate the first leaked instance of the credentials.
 - Works on **Windows, macOS, and Linux** (uses `pathlib` for cross-platform compatibility).
 - Implements **error handling** for user input.
 
@@ -93,7 +93,7 @@ After execution, the script creates an output folder with these files:
 | **Filename**       | **Description** |
 |-------------------|---------------|
 | `result.xlsx`     | Full extracted data, including **Email, Password, Filename, Date, Phone, Address, Bucket, Media, Content Type, and Size**. |
-| `filtered.xlsx`   | **Filtered version** of `result.xlsx`, keeping only the **oldest record** for each **Email + Password** pair. |
+| `filtered.xlsx`   | **Filtered version** of `result.xlsx`, keeping only the **oldest record** for each **Email + Password** pair to indicate the first leaked instance of the credentials. |
 | `credentials.txt` | List of `email:password` pairs. |
 | `emails.txt`      | Extracted email addresses. |
 | `passwords.txt`   | Extracted passwords. |
