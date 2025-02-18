@@ -52,8 +52,8 @@ source intelx_env/bin/activate
 Once inside the virtual environment, install the required packages:
 ```sh
 pip install pandas
+pip install openpyxl
 ```
-💡 Only **pandas** needs manual installation since `zipfile`, `re`, `os`, and `pathlib` are part of Python’s standard library.
 
 ---
 
